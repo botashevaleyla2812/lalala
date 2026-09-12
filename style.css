@@ -1,0 +1,167 @@
+:root {
+  --bg: #f6f7f9;
+  --panel: #ffffff;
+  --ink: #1a2233;
+  --muted: #5b6472;
+  --line: #dde1e7;
+  --accent: #204b8a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+.header {
+  background: var(--ink);
+  color: #fff;
+  border-bottom: 3px solid var(--accent);
+}
+
+.header__inner {
+  padding: 56px 24px 40px;
+}
+
+.header__prompt {
+  margin: 0 0 12px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 13px;
+  color: #9aa7bd;
+}
+
+.header__photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.header__name {
+  margin: 0 0 6px;
+  font-size: clamp(32px, 6vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header__role {
+  margin: 0;
+  font-size: 17px;
+  color: #b9c2d4;
+  font-weight: 400;
+}
+
+/* Sections */
+
+.section {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section__title {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.section__text {
+  margin: 0 0 14px;
+  max-width: 62ch;
+  color: var(--ink);
+}
+
+.section__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Contacts */
+
+.contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.contacts__item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contacts__item:last-child {
+  border-bottom: none;
+}
+
+.contacts__label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.contacts__value {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+a.contacts__value:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* Footer */
+
+.footer {
+  padding: 24px 0 48px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .header__inner {
+    padding: 40px 20px 32px;
+  }
+
+  .contacts__item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
